@@ -1,0 +1,36 @@
+EJECUTA LOS SIGIENTE COMANDOS ANTES DE COMPILAR EL PROYECTO
+
+Version de Angular 7
+
+npm i bootstrap jquery popper.js ngx-spinner -S   -->  instalacion de dependencias de nostrap jquery, se ejecuta dentro del proyecto.	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
