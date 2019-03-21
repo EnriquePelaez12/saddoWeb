@@ -12,6 +12,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/products/product/product.component';
 import { ProductListComponent } from './components/products/product-list/product-list.component';
 import { PrivadoComponent } from './components/privado/privado.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PrivadoComponent } from './components/privado/privado.component';
     ProductsComponent,
     ProductComponent,
     ProductListComponent,
-    PrivadoComponent
+    PrivadoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
