@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -18,6 +19,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import { FlashMessagesService } from 'angular2-flash-messages';
 
+//animaciones para mensajes de confirmacion
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ToastrModule} from 'ngx-toastr'
+
 
 
 //estamos importando las dependencias para conectar fire base
@@ -28,6 +33,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+//servicios
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -50,10 +57,12 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
+    ToastrModule.forRoot(),
     AngularFireDatabaseModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    BrowserAnimationsModule
   ],
-  providers: [AngularFireAuth, AngularFirestore, FlashMessagesService],
+  providers: [AuthService, AngularFireAuth, AngularFirestore, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

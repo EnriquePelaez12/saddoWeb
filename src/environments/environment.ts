@@ -5,12 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig:{
-    apiKey: "AIzaSyCeYjJTIS1Nfdf1CXrN4LZDrCzb5AbhW0c",
-    authDomain: "record2-2c0ce.firebaseapp.com",
-    databaseURL: "https://record2-2c0ce.firebaseio.com",
-    projectId: "record2-2c0ce",
-    storageBucket: "record2-2c0ce.appspot.com",
-    messagingSenderId: "213701514244"
+    apiKey: "AIzaSyCmbDp4x_lQEXVnyXZkC-Fu7f1zQdp3L8Q",
+    authDomain: "notionic-4fd98.firebaseapp.com",
+    databaseURL: "https://notionic-4fd98.firebaseio.com",
+    projectId: "notionic-4fd98",
+    storageBucket: "notionic-4fd98.appspot.com",
+    messagingSenderId: "1074303982751"
+  
   }
 };
 

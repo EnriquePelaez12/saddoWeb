@@ -1,3 +1,160 @@
-<p>
-  product works!
-</p>
+<div class="card mt-5">
+  <span class="card-title text-center">Nuevo Documento</span>
+  <div class="card-body">
+      
+    <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+      <input type="hidden" name="$key" #$key="ngModel"[(ngModel)]="productService.selectedProduct.$key">
+ 
+      <div class="form-group">
+          <label>Id Documento</label>
+  <input
+  type="texto"
+  class="form-control"
+  name="idDocumento"
+  #idDocumento="ngModel"
+  [(ngModel)]="productService.selectedProduct.idDocumento"
+  placeholder="Anadir id Documento">
+  
+     </div> 
+     <label>Asunto</label>
+  <div class="form-group">
+        <input
+        type="texto"
+        class="form-control"
+        name="Asunto"
+        #Asunto="ngModel"
+        [(ngModel)]="productService.selectedProduct.Asunto"
+        placeholder="Anadir Asunto">
+  </div> 
+
+  <label>Destino</label>
+
+  <div class="form-group">
+      <input
+      type="texto"
+      class="form-control"
+      name="destino"
+      #fDocumento="ngModel"
+      [(ngModel)]="productService.selectedProduct.destino"
+      placeholder="Destino">
+</div> 
+
+
+<label>Destinatario</label>
+
+  <div class="form-group">
+      <input
+      type="texto"
+      class="form-control"
+      name="destinatario"
+      #fDocumento="ngModel"
+      [(ngModel)]="productService.selectedProduct.destinatario"
+      placeholder="Destinatario">
+</div> 
+
+
+<label>Origen</label>
+
+  <div class="form-group">
+      <input
+      type="texto"
+      class="form-control"
+      name="origen"
+      #fDocumento="ngModel"
+      [(ngModel)]="productService.selectedProduct.origen"
+      placeholder="Origen">
+</div> 
+
+
+<label>Remitente</label>
+
+  <div class="form-group">
+      <input
+      type="texto"
+      class="form-control"
+      name="remitente"
+      #fDocumento="ngModel"
+      [(ngModel)]="productService.selectedProduct.remitente"
+      placeholder="Remitente">
+</div> 
+
+
+
+
+
+  <label>Fecha de Recibido</label>
+
+  <div class="form-group">
+      <input
+      type="texto"
+      class="form-control"
+      name="fDocumento"
+      #fDocumento="ngModel"
+      [(ngModel)]="productService.selectedProduct.fDocumento"
+      placeholder="Anadir Fecha de Recibido">
+</div> 
+
+
+<label>Fecha Limite</label>
+
+<div class="form-group">
+    <input
+    type="texto"
+    class="form-control"
+    name="fLimite"
+    #fLimite="ngModel"
+    [(ngModel)]="productService.selectedProduct.fLimite"
+    placeholder="Anadir Fecha Limite">
+</div> 
+
+<label>Prioridad</label>
+<div class="form-group">
+    <input
+    type="texto"
+    class="form-control"
+    name="prioridad"
+    #prioridad="ngModel"
+    [(ngModel)]="productService.selectedProduct.prioridad"
+    placeholder="Anadir prioridad">
+</div> 
+
+<label>Tipo</label>
+<div class="form-group">
+    <input
+    type="texto"
+    class="form-control"
+    name="tipo"
+    #img="ngModel"
+    [(ngModel)]="productService.selectedProduct.tipo"
+    placeholder="añadir  Tipo">
+</div> 
+
+<label>Status</label>
+<div class="form-group">
+    <input
+    type="texto"
+    class="form-control"
+    name="status"
+    #prioridad="ngModel"
+    [(ngModel)]="productService.selectedProduct.status"
+    placeholder="Anadir status">
+</div> 
+
+
+
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-plus-circle"></i>Anadir Nuevo
+        </button>
+        <button class="btn btn-secondary" type="reset"(click)="resetForm(producForm)">
+          <i class="fas fa-sync-alt"></i> limpiar
+        </button>
+
+
+      </div>
+    </form>
+
+    
+  </div>
+</div>

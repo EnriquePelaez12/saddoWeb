@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
 
   //
   onLoginRedirect(){
-    this.router.navigate(['privado']);//si esta logueado se manda a esa direccion
+    this.router.navigate(['products']);//si esta logueado se manda a esa direccion
 
   }
 

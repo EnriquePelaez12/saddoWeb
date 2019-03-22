@@ -1,3 +1,31 @@
-<p>
-  product-list works!
-</p>
+<div clas="card">
+  <div class="card-body">
+    <h6 class="text-center">Lista De Documetos</h6>
+    <table class="table table-sm table-hover">
+      <tbody> 
+        <tr *ngFor="let product of documentList"> 
+          <td>{{product.idDocumento}}</td>
+          <td>{{product.Asunto}}</td>
+          <td>{{product.destino}}</td>
+          <td>{{product.destinatario}}</td>
+          <td>{{product.origen}}</td>
+          <td>{{product.remitente}}</td>
+          <td>{{product.fDocumento}}</td>
+          <td>{{product.fLimite}}</td>
+          <td>{{product.prioridad}}</td>
+          <td>{{product.tipo}}</td>
+          <td>{{product.status}}</td>
+          <td>
+            <a class="btn btn-secondary text-red"(click)="onEdit(product)">
+              <i class="fas fa-edit"></i>
+
+            </a>
+            <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

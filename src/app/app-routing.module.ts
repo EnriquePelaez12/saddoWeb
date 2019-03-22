@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PrivadoComponent } from './components/privado/privado.component';
 import { Page404Component } from './components/page404/page404.component';
 import { ProfileComponent } from './components/users/profile/profile.component';
+import { ProductsComponent } from './components/products/products.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,6 +14,8 @@ const routes: Routes = [
   {path: 'users/register', component: RegisterComponent},
   {path: 'users/profile', component: ProfileComponent},
   {path: 'privado', component: PrivadoComponent},
+  {path: 'products', component: ProductsComponent},
+  
   {path: '**', component: Page404Component}
 ];
 
