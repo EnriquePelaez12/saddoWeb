@@ -14,6 +14,22 @@ import { ProductListComponent } from './components/products/product-list/product
 import { PrivadoComponent } from './components/privado/privado.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+//notificaciones
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import { FlashMessagesService } from 'angular2-flash-messages';
+
+
+
+//estamos importando las dependencias para conectar fire base
+import { AngularFireModule} from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuth} from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +46,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FlashMessagesModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [AngularFireAuth, AngularFirestore, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
