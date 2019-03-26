@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './components/users/register/register.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,10 +12,10 @@ import { ProductsComponent } from './components/products/products.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'users/login', component: LoginComponent},
-  {path: 'users/register', component: RegisterComponent},
-  {path: 'users/profile', component: ProfileComponent},
+  {path: 'users/register', component: RegisterComponent, canActivate: [AuthGuard]},
+  {path: 'users/profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'privado', component: PrivadoComponent},
-  {path: 'products', component: ProductsComponent},
+  {path: 'products', component: ProductsComponent, canActivate: [AuthGuard]},
   
   {path: '**', component: Page404Component}
 ];

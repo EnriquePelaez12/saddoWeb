@@ -15,15 +15,17 @@
       <li class="nav-item" *ngIf="!isLogin">
         <a class="nav-link" href="#" routerLink="/users/login">iniciar sesión</a>
       </li>
-      <li class="nav-item" *ngIf="!isLogin">
+      <li class="nav-item" *ngIf="isLogin">
         <a class="nav-link" href="#" routerLink="/users/register">Crear Nuevo Usuario</a>
       </li>
-
-      <li class="nav-item" *ngIf="i sLogin">
-        <a class="nav-link" href="#" routerLink="/privado">Enviar Doocumento</a>
+      <li class="nav-item" *ngIf="isLogin">
+        <a class="nav-link" href="#" routerLink="/users/profile">perfil</a>
       </li>
       <li class="nav-item" *ngIf="isLogin">
-        <a class="nav-link" href="#" (click)="onClickLogout()" >Salir</a>
+        <a class="nav-link" href="#" routerLink="/products">Doocumento</a>
+      </li>
+      <li class="nav-item" *ngIf="isLogin">
+        <a class="nav-link" href="#" (click)="onClickLogout()">Salir</a>
       </li>
       <li class="nav-item">
         <a class="nav-link">{{nombreUsuario}}</a>
